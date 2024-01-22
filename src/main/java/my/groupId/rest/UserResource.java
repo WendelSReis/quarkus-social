@@ -15,7 +15,6 @@ public class UserResource {
 
     @POST
     public Response createUser(CreateUserRequest userRequest) {
-        return Response.ok().build();
-
+        return Response.ok(userRequest).build();
     }
 }
