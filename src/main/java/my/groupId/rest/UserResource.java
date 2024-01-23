@@ -1,9 +1,6 @@
 package my.groupId.rest;
 
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import my.groupId.rest.dto.CreateUserRequest;
@@ -16,5 +13,10 @@ public class UserResource {
     @POST
     public Response createUser(CreateUserRequest userRequest) {
         return Response.ok(userRequest).build();
+    }
+
+    @GET
+    public Response listAllUsers() {
+        return Response.ok().build();
     }
 }
