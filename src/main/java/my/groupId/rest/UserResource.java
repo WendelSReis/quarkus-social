@@ -21,7 +21,6 @@ public class UserResource {
         User user = new User();
         user.setAge(userRequest.getAge());
         user.setName(userRequest.getName());
-
         user.persist();
 
         return Response.ok(user).build();
