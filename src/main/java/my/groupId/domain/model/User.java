@@ -45,7 +45,6 @@ public class User extends PanacheEntityBase {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User user)) return false;
-
         if (!Objects.equals(id, user.id)) return false;
         if (!Objects.equals(name, user.name)) return false;
         return Objects.equals(age, user.age);
