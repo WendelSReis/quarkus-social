@@ -1,13 +1,13 @@
 package my.groupId.rest;
 
-import jakarta.transaction.Transactional;
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
 import my.groupId.domain.model.User;
 import my.groupId.rest.dto.CreateUserRequest;
 
-import java.beans.Transient;
+import javax.transaction.Transactional;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
