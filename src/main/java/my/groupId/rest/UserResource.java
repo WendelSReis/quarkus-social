@@ -1,10 +1,13 @@
 package my.groupId.rest;
 
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import my.groupId.domain.model.User;
 import my.groupId.rest.dto.CreateUserRequest;
+
+import java.beans.Transient;
 
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -12,6 +15,7 @@ import my.groupId.rest.dto.CreateUserRequest;
 public class UserResource {
 
     @POST
+    @Transactional
     public Response createUser(CreateUserRequest userRequest) {
 
         User user = new User();
